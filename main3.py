@@ -28,7 +28,7 @@ class Window(arcade.Window):
     def setup(self):
         animals = ['bear','buffalo','chick','chicken','cow','crocodile','dog','duck','elephant','frog','giraffe','goat','gorilla','hippo','horse','monkey','moose','narwhal','owl','panda','parrot','penguin','pig','rabbit','rhino','sloth','snake','walrus','whale','zebra']
 
-        for i in range(NUM_ANIMALS):
+        for _ in range(NUM_ANIMALS):
             animal = random.choice(animals)
             x = random.randint(MARGIN,SCREEN_WIDTH-MARGIN)
             y = random.randint(MARGIN,SCREEN_HEIGHT-MARGIN)
@@ -50,7 +50,13 @@ class Window(arcade.Window):
 
 
             collisions = a.collides_with_list(self.animal_list)
-            for c in collisions:
+            for _ in collisions:
+                tx = a.dx
+                ty = a.dy
+                a.dx = _.dx
+                a.dy = _.dy
+                _.dx = tx
+                _.dy = ty
                 # implement conservation of momentum here
                 # pass just does nothing. After you add your code, ou can delete what is now on line 56
                 pass

@@ -9,3 +9,6 @@ You will then need to accelerate the balls according to the GRAVITY constant. Yo
 
 *main3.py* is an opportunity for you to implement elastic collisions using the conservation of momentum. Assuming the animals are the same mass, they will just trade velocities. Insert your collision code at line 53. *For extra credit,* give each animal a random mass and use that to calculate the new velocities (remember that m1v1 = m2v2).
 
+main1.py let all the balls drop on the bottom.
+main2.py let all the balls drop on the bottom and bounce again and again until it stop.
+main3.py the sprites are hitting each other and will slow down when moving for a while. But after hitting other, they will be in the same speed again.
